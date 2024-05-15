@@ -1,0 +1,82 @@
+Igniting APP
+when we do production is react do it own ?? => NO
+Lot of other other packages and Libararies make code scalable and fast APP
+npm - manages packages
+PS D:\shirisha Learning\ReactNamaste> npm init 
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (reactnamaste)
+version: (1.0.0)                                   
+description: This is React by Shirisha Abbaraboina 
+entry point: (app.js)                              
+test command: jest                                 
+git repository: (https://github.com/Shirisha-abbaraboina/ReactNamaste.git)
+keywords: react,shirisha 
+author: Shirisha Abbaraboina 
+license: (ISC) ISC
+About to write to D:\shirisha Learning\ReactNamaste\package.json:
+
+{
+  "name": "reactnamaste",
+  "version": "1.0.0",
+  "description": "This is React by Shirisha Abbaraboina",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shirisha-abbaraboina/ReactNamaste.git"
+  },
+  "keywords": [
+    "react",
+    "shirisha"
+  ],
+  "author": "Shirisha Abbaraboina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shirisha-abbaraboina/ReactNamaste/issues"
+  },
+  "homepage": "https://github.com/Shirisha-abbaraboina/ReactNamaste#readme"      
+}
+Is this OK? (yes)=> enter
+
+any depencies install cmd  npm install  -D paracel
+
+npx parcel index.html
+
+
+error:🚨 [parcel]: @parcel/transformer-js: Browser scripts cannot have imports or exports.
+D:\shirisha Learning\ReactNamaste\app.js:1:1
+> 1 | import React from "react";
+>   | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ReactDOM from "react-dom";
+  3 | 
+
+D:\shirisha Learning\ReactNamaste\index.html:22:1
+  21 |     <shirisha></shirisha> -->
+> 22 | <script src="./app.js"></script>
+>    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ The environment was originally created here
+  23 | </body>
+  24 | </html>
+
+Add the type="module" attribute to the <script> tag.
+console.<computed> @ index.js:1
+ws.onmessage @ runtime-4172d89589bb0433.js:162
+Show 2 more frames
+Show less
+runtime-4172d89589bb0433.js:188 [parcel] ✨ Error resolved
+
+basically in html file we are injecting the script tag,so its treats the script as 
+as a browser script it treats that this is a normal javascript no so basically it says that it cannot understad what we import
+
+Warning: You are importing createRoot from "react-dom" which is not supported. You should instead import it from "react-dom/client".
+it say that ReactDOM client
